@@ -1,0 +1,12 @@
+
+services:
+  findAFriend_pg:
+    image: bitnami/postgresql:latest
+    ports:
+      - 5433:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=adminPassFindAFriend
+      - POSTGRES_USER=adminDbAPI
+      - POSTGRES_DB=findAFriend_DB  
